@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Labs</key>
+	<dict>
+		<key>GELIB 4th</key>
+		<dict>
+			<key>Num</key>
+			<string>36 Windows</string>
+			<key>Hours</key>
+			<array>
+				<string>24 hours</string>
+				<string>24 hours</string>
+				<string>24 hours</string>
+				<string>24 hours</string>
+				<string>closes at 9:00PM</string>
+				<string>10:00AM-9:00PM</string>
+				<string>24 hours</string>
+			</array>
+		</dict>
+		<key>GELIB 057</key>
+		<dict>
+			<key>Num</key>
+			<string>40 Linux</string>
+			<key>Hours</key>
+			<array>
+				<string>24 hours</string>
+				<string>24 hours</string>
+				<string>24 hours</string>
+				<string>24 hours</string>
+				<string>closes at 9:00PM</string>
+				<string>10:00AM-9:00PM</string>
+				<string>24 hours</string>
+			</array>
+		</dict>
+		<key>MEL 1009</key>
+		<dict>
+			<key>Num</key>
+			<string>40 Windows</string>
+			<key>Hours</key>
+			<array>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-9:00PM</string>
+				<string>10:00AM-9:00PM</string>
+				<string>10:00AM-12:00AM</string>
+			</array>
+		</dict>
+		<key>MEL 1001</key>
+		<dict>
+			<key>Num</key>
+			<string>25 Windows</string>
+			<key>Hours</key>
+			<array>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-9:00PM</string>
+				<string>10:00AM-9:00PM</string>
+				<string>10:00AM-12:00AM</string>
+			</array>
+		</dict>
+		<key>EVRT 252</key>
+		<dict>
+			<key>Num</key>
+			<string>39 Linux</string>
+			<key>Hours</key>
+			<array>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-9:00PM</string>
+				<string>10:00AM-9:00PM</string>
+				<string>10:00AM-12:00AM</string>
+			</array>
+		</dict>
+		<key>EH 406B8</key>
+		<dict>
+			<key>Num</key>
+			<string>40 Windows</string>
+			<key>Hours</key>
+			<array>
+				<string>24 hours/day, 7 days/wk</string>
+			</array>
+		</dict>
+		<key>EH 406B1</key>
+		<dict>
+			<key>Num</key>
+			<string>40 Windows</string>
+			<key>Hours</key>
+			<array>
+				<string>24 hours/day, 7 days/wk</string>
+			</array>
+		</dict>
+		<key>DCL L520</key>
+		<dict>
+			<key>Num</key>
+			<string>40 Linux</string>
+			<key>Hours</key>
+			<array>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-9:00PM</string>
+				<string>10:00AM-9:00PM</string>
+				<string>10:00AM-12:00AM</string>
+			</array>
+		</dict>
+		<key>DCL L440</key>
+		<dict>
+			<key>Num</key>
+			<string>30 Linux</string>
+			<key>Hours</key>
+			<array>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-9:00PM</string>
+				<string>10:00AM-9:00PM</string>
+				<string>10:00AM-12:00AM</string>
+			</array>
+		</dict>
+		<key>DCL L416</key>
+		<dict>
+			<key>Num</key>
+			<string>26 Windows</string>
+			<key>Hours</key>
+			<array>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-12:00AM</string>
+				<string>8:00AM-9:00PM</string>
+				<string>10:00AM-9:00PM</string>
+				<string>10:00AM-12:00AM</string>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>

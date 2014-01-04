@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AFNetworking.h"
 #import "EWSCell.h"
+#import "EWSdetailViewController.h"
 
 @interface EWSViewController : UITableViewController <UITableViewDataSource, UITableViewDataSource>{
     BOOL loaded;

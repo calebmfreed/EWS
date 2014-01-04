@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleMaps/GoogleMaps.h>
+
 
 @interface EWSAppDelegate : UIResponder <UIApplicationDelegate>
 

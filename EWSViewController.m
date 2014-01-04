@@ -35,8 +35,9 @@
     self.navigationController.navigationItem.title = @"Labs";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
-    self.tableView.backgroundColor = [UIColor blackColor];
+    self.tableView.backgroundColor = [UIColor orangeColor];
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    refreshControl.tintColor = [UIColor blueColor];
     [refreshControl addTarget:self action:@selector(updateJson:) forControlEvents:UIControlEventValueChanged];
     [self setRefreshControl:refreshControl];
 
@@ -69,19 +70,175 @@
         [_labs removeAllObjects];
         for(int i = 0; i < [_jsonResponse count]; i++)
         {
-            if(i == 0 || i == 3 || i == 4 || i == 7 || i == 8 || i == 9)
+            if([_jsonResponse[i][@"strlabname"] isEqualToString:@"DCL L416"])
             {
                 NSMutableDictionary *mutDict;
                 mutDict = [_jsonResponse[i] mutableCopy];
-                [mutDict setObject:@"Win" forKey:@"types"];//DCL L416
+                [mutDict setObject:@"Windows" forKey:@"types"];//DCL L416
+                [mutDict setObject:@"Digital Computer Lab" forKey:@"name"];//DCL L416
+                [mutDict setObject:@"40.1131082" forKey:@"lat"];
+                [mutDict setObject:@"-88.22652339999999" forKey:@"lng"];
+                [mutDict setObject:@"L416" forKey:@"room"];//DCL L416
+                [mutDict setObject:@"1304 Springfield Ave, Urbana, IL 61801" forKey:@"address"];
                 [_labs addObject:mutDict];
             }
-            else{
+            else if([_jsonResponse[i][@"strlabname"] isEqualToString:@"DCL L440"])
+            {
                 NSMutableDictionary *mutDict;
                 mutDict = [_jsonResponse[i] mutableCopy];
-                [mutDict setObject:@"Lin" forKey:@"types"];//DCL L416
+                [mutDict setObject:@"Linux" forKey:@"types"];//DCL L440
+                [mutDict setObject:@"Digital Computer Lab" forKey:@"name"];
+                [mutDict setObject:@"40.1131082" forKey:@"lat"];
+                [mutDict setObject:@"-88.22652339999999" forKey:@"lng"];
+                [mutDict setObject:@"L440" forKey:@"room"];
+                [mutDict setObject:@"1304 Springfield Ave, Urbana, IL 61801" forKey:@"address"];
                 [_labs addObject:mutDict];
             }
+            else if([_jsonResponse[i][@"strlabname"] isEqualToString:@"DCL L520"])
+            {
+                NSMutableDictionary *mutDict;
+                mutDict = [_jsonResponse[i] mutableCopy];
+                [mutDict setObject:@"Linux" forKey:@"types"];//DCL L520
+                [mutDict setObject:@"Digital Computer Lab" forKey:@"name"];
+                [mutDict setObject:@"40.1131082" forKey:@"lat"];
+                [mutDict setObject:@"-88.22652339999999" forKey:@"lng"];
+                [mutDict setObject:@"L520" forKey:@"room"];
+                [mutDict setObject:@"1304 Springfield Ave, Urbana, IL 61801" forKey:@"address"];
+                [_labs addObject:mutDict];
+            }
+            else if([_jsonResponse[i][@"strlabname"] isEqualToString:@"EH 406B1"])
+            {
+                NSMutableDictionary *mutDict;
+                mutDict = [_jsonResponse[i] mutableCopy];
+                [mutDict setObject:@"Windows" forKey:@"types"];//EH 406B1
+                [mutDict setObject:@"Engineering Hall" forKey:@"name"];
+                [mutDict setObject:@"40.1108517" forKey:@"lat"];
+                [mutDict setObject:@"-88.226974" forKey:@"lng"];
+                [mutDict setObject:@"406B1" forKey:@"room"];
+                [mutDict setObject:@"1308 W Green St, Urbana, IL 61801" forKey:@"address"];
+                [_labs addObject:mutDict];
+            }
+            else if([_jsonResponse[i][@"strlabname"] isEqualToString:@"EH 406B8"])
+            {
+                NSMutableDictionary *mutDict;
+                mutDict = [_jsonResponse[i] mutableCopy];
+                [mutDict setObject:@"Windows" forKey:@"types"];//EH 406B8
+                [mutDict setObject:@"Engineering Hall" forKey:@"name"];
+                [mutDict setObject:@"40.1108517" forKey:@"lat"];
+                [mutDict setObject:@"-88.226974" forKey:@"lng"];
+                [mutDict setObject:@"406B8" forKey:@"room"];
+                [mutDict setObject:@"1308 W Green St, Urbana, IL 61801" forKey:@"address"];
+                [_labs addObject:mutDict];
+            }
+            else if([_jsonResponse[i][@"strlabname"] isEqualToString:@"EVRT 252"])
+            {
+                NSMutableDictionary *mutDict;
+                mutDict = [_jsonResponse[i] mutableCopy];
+                [mutDict setObject:@"Linux" forKey:@"types"];//EVRT 252
+                [mutDict setObject:@"Everitt Lab" forKey:@"name"];
+                [mutDict setObject:@"40.1108681" forKey:@"lat"];
+                [mutDict setObject:@"-88.2283044" forKey:@"lng"];
+                [mutDict setObject:@"252" forKey:@"room"];
+                [mutDict setObject:@"619 S Wright St, Champaign, IL 61820" forKey:@"address"];
+                [_labs addObject:mutDict];
+            }
+            else if([_jsonResponse[i][@"strlabname"] isEqualToString:@"GELIB 057"])
+            {
+                NSMutableDictionary *mutDict;
+                mutDict = [_jsonResponse[i] mutableCopy];
+                [mutDict setObject:@"Linux" forKey:@"types"];//GELIB 057
+                [mutDict setObject:@"Grainger Library" forKey:@"name"];
+                [mutDict setObject:@"40.1127329" forKey:@"lat"];
+                [mutDict setObject:@"-88.22564059999999" forKey:@"lng"];
+                [mutDict setObject:@"057" forKey:@"room"];
+                [mutDict setObject:@"1301 West Springfield Avenue, Urbana, Illinois 61801" forKey:@"address"];
+                [_labs addObject:mutDict];
+            }
+            else if([_jsonResponse[i][@"strlabname"] isEqualToString:@"GELIB 4th"])
+            {
+                NSMutableDictionary *mutDict;
+                mutDict = [_jsonResponse[i] mutableCopy];
+                [mutDict setObject:@"Windows" forKey:@"types"];//GELIB 4th
+                [mutDict setObject:@"Grainger Library" forKey:@"name"];
+                [mutDict setObject:@"40.1127329" forKey:@"lat"];
+                [mutDict setObject:@"-88.22564059999999" forKey:@"lng"];
+                [mutDict setObject:@"4th" forKey:@"room"];
+                [mutDict setObject:@"1301 West Springfield Avenue, Urbana, Illinois 61801" forKey:@"address"];
+                [_labs addObject:mutDict];
+            }
+            else if([_jsonResponse[i][@"strlabname"] isEqualToString:@"MEL 1001"])
+            {
+                NSMutableDictionary *mutDict;
+                mutDict = [_jsonResponse[i] mutableCopy];
+                [mutDict setObject:@"Windows" forKey:@"types"];//MEL 1001
+                [mutDict setObject:@"Mechanical Engineering Lab" forKey:@"name"];
+                [mutDict setObject:@"40.1116671" forKey:@"lat"];
+                [mutDict setObject:@"-88.2259866" forKey:@"lng"];
+                [mutDict setObject:@"1001" forKey:@"room"];
+                [mutDict setObject:@"105 S Mathews Ave, Urbana, IL 61801" forKey:@"address"];
+                [_labs addObject:mutDict];
+            }
+            else if([_jsonResponse[i][@"strlabname"] isEqualToString:@"MEL 1009"])
+            {
+                NSMutableDictionary *mutDict;
+                mutDict = [_jsonResponse[i] mutableCopy];
+                [mutDict setObject:@"Windows" forKey:@"types"];//MEL 1009
+                [mutDict setObject:@"Mechanical Engineering Lab" forKey:@"name"];
+                [mutDict setObject:@"40.1116671" forKey:@"lat"];
+                [mutDict setObject:@"-88.2259866" forKey:@"lng"];
+                [mutDict setObject:@"1009" forKey:@"room"];
+                [mutDict setObject:@"105 S Mathews Ave, Urbana, IL 61801" forKey:@"address"];
+                [_labs addObject:mutDict];
+            }
+            else if([_jsonResponse[i][@"strlabname"] isEqualToString:@"SIEBL 0218"])
+            {
+                NSMutableDictionary *mutDict;
+                mutDict = [_jsonResponse[i] mutableCopy];
+                [mutDict setObject:@"Linux" forKey:@"types"];//SIEBL 0218
+                [mutDict setObject:@"Siebel Center" forKey:@"name"];
+                [mutDict setObject:@"40.1138245" forKey:@"lat"];
+                [mutDict setObject:@"-88.2240759" forKey:@"lng"];
+                [mutDict setObject:@"0218" forKey:@"room"];
+                [mutDict setObject:@"201 N Goodwin Ave, Urbana, IL 61801" forKey:@"address"];
+                [_labs addObject:mutDict];
+            }
+            else if([_jsonResponse[i][@"strlabname"] isEqualToString:@"SIEBL 0220"])
+            {
+                NSMutableDictionary *mutDict;
+                mutDict = [_jsonResponse[i] mutableCopy];
+                [mutDict setObject:@"Linux" forKey:@"types"];//SIEBL 0220
+                [mutDict setObject:@"Siebel Center" forKey:@"name"];
+                [mutDict setObject:@"40.1138245" forKey:@"lat"];
+                [mutDict setObject:@"-88.2240759" forKey:@"lng"];
+                [mutDict setObject:@"0220" forKey:@"room"];
+                [mutDict setObject:@"201 N Goodwin Ave, Urbana, IL 61801" forKey:@"address"];
+                [_labs addObject:mutDict];
+            }
+            else if([_jsonResponse[i][@"strlabname"] isEqualToString:@"SIEBL 0222"])
+            {
+                NSMutableDictionary *mutDict;
+                mutDict = [_jsonResponse[i] mutableCopy];
+                [mutDict setObject:@"Linux" forKey:@"types"];//SIEBL 0222
+                [mutDict setObject:@"Siebel Center" forKey:@"name"];
+                [mutDict setObject:@"40.1138245" forKey:@"lat"];
+                [mutDict setObject:@"-88.2240759" forKey:@"lng"];
+                [mutDict setObject:@"0222" forKey:@"room"];
+                [mutDict setObject:@"201 N Goodwin Ave, Urbana, IL 61801" forKey:@"address"];
+                [_labs addObject:mutDict];
+            }
+//            if(i == 0 || i == 3 || i == 4 || i == 7 || i == 8 || i == 9)
+//            {
+//                NSMutableDictionary *mutDict;
+//                mutDict = [_jsonResponse[i] mutableCopy];
+//                [mutDict setObject:@"Win" forKey:@"types"];//DCL L416
+//                [_labs addObject:mutDict];
+//            }
+//            else{
+//                NSMutableDictionary *mutDict;
+//                mutDict = [_jsonResponse[i] mutableCopy];
+//                [mutDict setObject:@"Lin" forKey:@"types"];//DCL L416
+//                [_labs addObject:mutDict];
+//            }
         }
 //        
 //        NSMutableDictionary *mutDict;
@@ -170,7 +327,7 @@
 forRowAtIndexPath: (NSIndexPath*)indexPath
 {
     cell.backgroundColor = indexPath.row % 2
-    ? [UIColor colorWithRed: 30.0/255.0 green: 94.0/255.0 blue: 176.0/255.0 alpha: 1.0]
+    ? [UIColor colorWithRed: 30.0/255.0 green: 94.0/255.0 blue: 255.0/255.0 alpha: 1.0]
     : [UIColor clearColor];
     cell.textLabel.backgroundColor = [UIColor clearColor];
     cell.detailTextLabel.backgroundColor = [UIColor clearColor];
@@ -189,7 +346,7 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
         if(indexPath.row % 2 != 0){
             [cell.layer setCornerRadius:7.0f];
             [cell.layer setMasksToBounds:YES];
-            [cell.layer setBorderWidth:2.0f];
+            //[cell.layer setBorderWidth:2.0f];
             int diff = [_labs[indexPath.row/2][@"machinecount"] integerValue]-[_labs[indexPath.row/2][@"inusecount"] integerValue];
             cell.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1];
             cell.name.text = _labs[indexPath.row/2][@"strlabname"];
@@ -227,6 +384,9 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"toDetails" sender:self];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -266,7 +426,7 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -274,8 +434,13 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"toDetails"])
+    {
+        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+
+        [segue.destinationViewController setLab:_labs[selectedRowIndex.row/2]];
+    }
 }
 
- */
 
 @end
