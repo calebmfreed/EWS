@@ -33,7 +33,6 @@
 	// Do any additional setup after loading the view.
     
     NSArray * dofweek = [NSArray arrayWithObjects:@"Mon",@"Tues",@"Wed",@"Thurs", @"Fri", @"Sat", @"Sun", nil];
-    NSLog(@"Thing: %@", dofweek);
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"LabInfo" ofType:@"plist"];
     NSDictionary *properties = [NSDictionary dictionaryWithContentsOfFile:filePath];
     NSLog(@"%@", _lab[@"strlabname"]);
@@ -60,7 +59,10 @@
     _hours.text = temp;
 
     self.navigationItem.title = _lab[@"strlabname"];
-    CGRect frame = CGRectMake(0, 0, 320.0f, 320.0f);
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenHeight = screenRect.size.height;
+    NSLog(@"screenH:%f", screenHeight);
+    CGRect frame = CGRectMake(0, 0, 320.0f,screenHeight/2);
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[_lab[@"lat"] doubleValue]
                                                             longitude:[_lab[@"lng"] doubleValue]
                                                                  zoom:17];

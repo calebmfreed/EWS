@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36B548BE188F439200917C33 /* win7logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B548BD188F439200917C33 /* win7logo.png */; };
+		36B548C0188F439D00917C33 /* linux-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B548BF188F439D00917C33 /* linux-logo.png */; };
 		36BA18A818728734009F90E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BA18A718728734009F90E5 /* Foundation.framework */; };
 		36BA18AA18728734009F90E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BA18A918728734009F90E5 /* CoreGraphics.framework */; };
 		36BA18AC18728734009F90E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BA18AB18728734009F90E5 /* UIKit.framework */; };
@@ -61,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36B548BD188F439200917C33 /* win7logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win7logo.png; sourceTree = "<group>"; };
+		36B548BF188F439D00917C33 /* linux-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "linux-logo.png"; sourceTree = "<group>"; };
 		36BA18A418728734009F90E5 /* EWS Lab Activity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EWS Lab Activity.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BA18A718728734009F90E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		36BA18A918728734009F90E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -227,6 +231,8 @@
 		36BA18AE18728734009F90E5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				36B548BF188F439D00917C33 /* linux-logo.png */,
+				36B548BD188F439200917C33 /* win7logo.png */,
 				36BA18AF18728734009F90E5 /* EWS Lab Activity-Info.plist */,
 				36BA18B018728734009F90E5 /* InfoPlist.strings */,
 				36BA18B318728734009F90E5 /* main.m */,
@@ -359,6 +365,8 @@
 				36BA18C018728734009F90E5 /* Images.xcassets in Resources */,
 				36BA192118751794009F90E5 /* LabInfo.plist in Resources */,
 				36BA18B218728734009F90E5 /* InfoPlist.strings in Resources */,
+				36B548C0188F439D00917C33 /* linux-logo.png in Resources */,
+				36B548BE188F439200917C33 /* win7logo.png in Resources */,
 				36BA18BB18728734009F90E5 /* Main.storyboard in Resources */,
 				36BA190718750B90009F90E5 /* GoogleMaps.bundle in Resources */,
 			);

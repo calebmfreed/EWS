@@ -28,16 +28,18 @@
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = YES;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationController.navigationItem.title = @"Labs";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
-    self.tableView.backgroundColor = [UIColor orangeColor];
+    //Illini orange color background
+    self.tableView.backgroundColor = [UIColor colorWithRed:255.0/255.0 green: 109.0/255.0 blue: 0.0/255.0 alpha: 1.0];
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    refreshControl.tintColor = [UIColor blueColor];
+    //illini blue refresh
+    refreshControl.tintColor = [UIColor colorWithRed:0.0/255.0 green: 52.0/255.0 blue: 102.0/255.0 alpha: 1.0];
     [refreshControl addTarget:self action:@selector(updateJson:) forControlEvents:UIControlEventValueChanged];
     [self setRefreshControl:refreshControl];
 
@@ -148,8 +150,8 @@
                 mutDict = [_jsonResponse[i] mutableCopy];
                 [mutDict setObject:@"Linux" forKey:@"types"];//GELIB 057
                 [mutDict setObject:@"Grainger Library" forKey:@"name"];
-                [mutDict setObject:@"40.1127329" forKey:@"lat"];
-                [mutDict setObject:@"-88.22564059999999" forKey:@"lng"];
+                [mutDict setObject:@"40.11245" forKey:@"lat"];
+                [mutDict setObject:@"-88.226933" forKey:@"lng"];
                 [mutDict setObject:@"057" forKey:@"room"];
                 [mutDict setObject:@"1301 West Springfield Avenue, Urbana, Illinois 61801" forKey:@"address"];
                 [_labs addObject:mutDict];
@@ -160,8 +162,8 @@
                 mutDict = [_jsonResponse[i] mutableCopy];
                 [mutDict setObject:@"Windows" forKey:@"types"];//GELIB 4th
                 [mutDict setObject:@"Grainger Library" forKey:@"name"];
-                [mutDict setObject:@"40.1127329" forKey:@"lat"];
-                [mutDict setObject:@"-88.22564059999999" forKey:@"lng"];
+                [mutDict setObject:@"40.11245" forKey:@"lat"];
+                [mutDict setObject:@"-88.226933" forKey:@"lng"];
                 [mutDict setObject:@"4th" forKey:@"room"];
                 [mutDict setObject:@"1301 West Springfield Avenue, Urbana, Illinois 61801" forKey:@"address"];
                 [_labs addObject:mutDict];
@@ -196,8 +198,8 @@
                 mutDict = [_jsonResponse[i] mutableCopy];
                 [mutDict setObject:@"Linux" forKey:@"types"];//SIEBL 0218
                 [mutDict setObject:@"Siebel Center" forKey:@"name"];
-                [mutDict setObject:@"40.1138245" forKey:@"lat"];
-                [mutDict setObject:@"-88.2240759" forKey:@"lng"];
+                [mutDict setObject:@"40.11380" forKey:@"lat"];
+                [mutDict setObject:@"-88.225033" forKey:@"lng"];
                 [mutDict setObject:@"0218" forKey:@"room"];
                 [mutDict setObject:@"201 N Goodwin Ave, Urbana, IL 61801" forKey:@"address"];
                 [_labs addObject:mutDict];
@@ -208,8 +210,8 @@
                 mutDict = [_jsonResponse[i] mutableCopy];
                 [mutDict setObject:@"Linux" forKey:@"types"];//SIEBL 0220
                 [mutDict setObject:@"Siebel Center" forKey:@"name"];
-                [mutDict setObject:@"40.1138245" forKey:@"lat"];
-                [mutDict setObject:@"-88.2240759" forKey:@"lng"];
+                [mutDict setObject:@"40.11380" forKey:@"lat"];
+                [mutDict setObject:@"-88.225033" forKey:@"lng"];
                 [mutDict setObject:@"0220" forKey:@"room"];
                 [mutDict setObject:@"201 N Goodwin Ave, Urbana, IL 61801" forKey:@"address"];
                 [_labs addObject:mutDict];
@@ -220,8 +222,8 @@
                 mutDict = [_jsonResponse[i] mutableCopy];
                 [mutDict setObject:@"Linux" forKey:@"types"];//SIEBL 0222
                 [mutDict setObject:@"Siebel Center" forKey:@"name"];
-                [mutDict setObject:@"40.1138245" forKey:@"lat"];
-                [mutDict setObject:@"-88.2240759" forKey:@"lng"];
+                [mutDict setObject:@"40.11380" forKey:@"lat"];
+                [mutDict setObject:@"-88.225033" forKey:@"lng"];
                 [mutDict setObject:@"0222" forKey:@"room"];
                 [mutDict setObject:@"201 N Goodwin Ave, Urbana, IL 61801" forKey:@"address"];
                 [_labs addObject:mutDict];
@@ -327,7 +329,8 @@
 forRowAtIndexPath: (NSIndexPath*)indexPath
 {
     cell.backgroundColor = indexPath.row % 2
-    ? [UIColor colorWithRed: 30.0/255.0 green: 94.0/255.0 blue: 255.0/255.0 alpha: 1.0]
+    //illini blue cells
+    ? [UIColor colorWithRed:0.0/255.0 green: 52.0/255.0 blue: 102.0/255.0 alpha: 1.0]//colorWithRed: 30.0/255.0 green: 94.0/255.0 blue: 255.0/255.0 alpha: 1.0] //Colors: 30.0/255.0 green: 94.0/255.0 blue: 255.0/255.0 alpha: 1.0
     : [UIColor clearColor];
     cell.textLabel.backgroundColor = [UIColor clearColor];
     cell.detailTextLabel.backgroundColor = [UIColor clearColor];
@@ -351,7 +354,14 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
             cell.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1];
             cell.name.text = _labs[indexPath.row/2][@"strlabname"];
             cell.free.text = [NSString stringWithFormat:@"%d Free", diff];
-            cell.type.text = _labs[indexPath.row/2][@"types"];
+            if([_labs[indexPath.row/2][@"types"] isEqualToString:@"Linux"])
+            {
+                [cell.typePic setImage:[UIImage imageNamed:@"linux-logo"]];
+            }
+            else{
+                [cell.typePic setImage:[UIImage imageNamed:@"win7logo"]];
+
+            }
             cell.userInteractionEnabled = YES;
             if(diff < 5)
             {
@@ -372,6 +382,7 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
             cell.name.text = @"";
             cell.free.text = @"";
             cell.type.text = @"";
+            [cell.typePic setImage:nil];
             [cell.layer setMasksToBounds:NO];
             cell.userInteractionEnabled = NO;
 
@@ -385,7 +396,26 @@ forRowAtIndexPath: (NSIndexPath*)indexPath
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
     [self performSegueWithIdentifier:@"toDetails" sender:self];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *sectionName;
+    NSDate *now = [NSDate date];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"hh:mm:ss";
+    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    NSLog(@"The Current Time is %@",[dateFormatter stringFromDate:now]);
+    
+    sectionName = [NSString stringWithFormat:@"Last Updated: %@",[dateFormatter stringFromDate:now]];
+
+
+    return sectionName;
 }
 /*
 // Override to support conditional editing of the table view.
